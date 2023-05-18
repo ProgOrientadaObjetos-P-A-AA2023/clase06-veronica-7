@@ -5,6 +5,7 @@
  */
 package paquete01;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejecutor {
@@ -17,7 +18,9 @@ public class Ejecutor {
         int autos;
         boolean bandera;
         String opcion;
+        
         Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
 
         // Inicio de proceso iterativo 
         bandera = true;

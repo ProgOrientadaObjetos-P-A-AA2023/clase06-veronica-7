@@ -33,8 +33,7 @@ public class Ejecutor {
             autos = entrada.nextInt();
             
             // con los datos ingresados se crea el objeto de tipo Vendedor
-            Vendedor v = new Vendedor(nombre, edad, sMinino, 
-                    autos);
+            Vendedor v = new Vendedor(nombre, edad, sMinino, autos);
             v.calcularPagoMensual();
             cadenaFinal = String.format("%sDatos de Vendedor\n" +
                     "Nombre: %s\n" +
@@ -60,8 +59,8 @@ public class Ejecutor {
         // cadenaFinal a un archivo
         ArchivoEscritura archivo = new ArchivoEscritura(); // objeto para crear
                                                            // archivo 
-        archivo.establecerNombreArchivo("informacion");
-        archivo.establecerDataFinal(cadenaFinal);
+        archivo.establecerNombreArchivo("informacion02");
+        archivo.establecerDataFinal(cadenaFinal); //Se envia la cadena acumulada.
         archivo.agregarRegistros();
     }
 }

@@ -11,7 +11,7 @@ import java.util.Formatter;
 public class ArchivoEscritura {
     private String nombreArchivo;
     private String dataFinal;
-    private Formatter salidaArchivo;
+    private Formatter salidaArchivo; //Formatter propio de Java.
     
     public void establecerNombreArchivo(String n){
         nombreArchivo = n;

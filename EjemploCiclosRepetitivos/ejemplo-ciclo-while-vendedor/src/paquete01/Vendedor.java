@@ -23,6 +23,7 @@ public class Vendedor {
         edad = e;
         salarioMinimo = sMinimo;
         establecerNumeroAutos(nAutos);
+        //numeroAutos = nAutos; Es lo mismo.
         comisionPorAuto = 150;
     }
 

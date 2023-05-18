@@ -1,0 +1,7 @@
+Datos de Vendedor
+Nombre: perr
+Edad: 14
+Salario mínimo: 300,00
+Número de autos: 6
+Pago mensual: 1200,00
+

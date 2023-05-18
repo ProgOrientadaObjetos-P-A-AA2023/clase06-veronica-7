@@ -1,33 +1,34 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package paquete02;
-
+package paquete04;
 import java.util.Locale;
 import java.util.Scanner;
-
-public class Ejecutor {
-
+import paquete02.Vendedor;
+/**
+ *
+ * @author SALA I
+ */
+public class Principal {
+    
     public static void main(String[] args) {
-        // variables para ingreso de datos
+        
         String nombre;
         int edad;
         double sMinino;
         int autos;
-        boolean bandera;
-        String opcion;
+        int contador = 1;
+        String cadenaFinal;
         
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
-        String cadenaFinal;
-        // Inicio de proceso iterativo 
-        bandera = true;
         cadenaFinal = ""; // inicializo la variable que contendrá la cadena
         // final.
-        while (bandera) { // bandera == true
+        
+        //Tambien se puede usar un ciclo for.
+        while (contador <= 3) { // bandera == true
             System.out.println("Ingrese el nombre del vendedor");
             nombre = entrada.nextLine();
             System.out.println("Ingrese edad del vendedor");
@@ -47,19 +48,13 @@ public class Ejecutor {
                     + "Salario mínimo: %.2f\n"
                     + "Número de autos: %d\n"
                     + "Pago mensual: %.2f\n\n",
-                    cadenaFinal, //Al comentar y no pedir a la cadena final, se dejan de acumular los datos de los demás vendOR.
+                    cadenaFinal, //Al comentar y no pedir a la cadena final, se dejan de acumular los datos de los demás vendores.
                     v.obtenerNombres(), v.obtenerEdad(),
                     v.obtenerSalarioMinimo(), v.obtenerNumeroAutos(),
                     v.obtenerPagoMensual());
 
             entrada.nextLine(); // limpieza del buffer
-            System.out.println("Desea ingresar más vendedores. Ingrese n para"
-                    + " salir");
-            opcion = entrada.nextLine();
-            if (opcion.equals("n")) {
-                bandera = false;
-            }
-
+            contador++;
         }
         // cuando se sale del ciclo repetitivo debemos presentar en pantalla
         // el valor de cadena final
